@@ -1,0 +1,42 @@
+/* Reset some default styles for body, h1, and p elements */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styles with background image */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: linear-gradient( pink,white); /* Path to your image file */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    text-align: center;
+}
+
+/* Styles for the prediction container */
+#prediction-container {
+    background-color: #aaffff; /* Light Pink background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.253);
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Heading (h1) styles */
+h1 {
+    color: #080808; /* Purple text color */
+}
+
+/* Styles for the prediction text */
+#prediction-text {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ffa600; /* Orange text color */
+}
+
+/* Styles for the prediction value */
+#prediction-value {
+    font-weight: bold;
+    color: #020082; /* Indigo text color */
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+    <title>Sentiment Analysis App</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        div {
+            text-align: center;
+        }
+
+        label[for="text_input"] {
+            font-size: 50px; /* Adjust the size as needed */
+        }
+
+        #text_input {
+            font-size: 16px; /* Adjust the size as needed */
+        }
+
+        button {
+            font-size: 30px; /* Adjust the size as needed */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Sentiment Analysis App</h1>
+        <form method="post" action="{{ url_for('analyze_sentiment') }}">
+            <label for="text_input">Enter Text:</label>
+            <textarea id="text_input" name="text_input" rows="2" cols="120" required></textarea>
+            <br>
+            <button type="submit">Predict Sentiment</button>
+        </form>
+        {% if sentiment %}
+            <h2>Result: {{ sentiment }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
